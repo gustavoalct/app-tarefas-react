@@ -1,0 +1,23 @@
+.task-container{
+    background-color: gray;
+    margin: 8px 0 ;
+    padding: 14px 20px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.task-title{
+    cursor: pointer;
+}
+
+.buttons-container{
+    background-color: gray;
+    border:none;
+    font-size: 14pt;
+    color:green; 
+    display: flex;
+    align-items: flex-end;
+}
