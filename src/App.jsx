@@ -1,22 +1,22 @@
 import React, {useEffect, useState} from "react";
-// App js componente pai
-
-import Header from "./components/Header";
-// importar componente tasks
-import Tasks from "./components/Tasks";
 import axios from "axios";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import TaskDetails from "./components/TaskDetails";
-// importar arquivo css
-import './App.css';
-import AddTask from "./components/AddTask";
 import {v4 as uuidv4} from 'uuid'
+
+import Header from "./components/Header";
+import Tasks from "./components/Tasks";
+import TaskDetails from "./components/TaskDetails";
+import AddTask from "./components/AddTask";
+
+//  CSS
+import './App.css';
+
 
 // aqui seria dentro do html, podemos usar java script dentro do html
 const App = () => {
   // passar esses valores com  o props para a tasks.js, dentro do componente Tasks
   const [tasks, setTasks] = useState([
-    {id:1, title:'Estudar React', completed:false},
+    {id:1, title:'Estudando React', completed:false},
     {id:2, title:'Estudar Vue', completed:true},
     {id:3, title:'Estudar Java', completed:true},
   ]);
@@ -84,18 +84,3 @@ const App = () => {
 };
 
 export default App;
-
-
-  // const message =  'hello word'; // quando alterada nao atualiza o componente
-  // const [message, setMessage] = useState("Hello word"); // useState valor inicial, // atualiza o componente o state
-/*
-return (
-  <>
-    <div className='container '> 
-    <p> {message}</p>
-    </div>
-    <button onClick={() => setMessage('hellooooo gustavao ')}> Mudar mensagem</button> 
- 
-  </>
-);
-*/
